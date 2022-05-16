@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylev.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxs-virus-block' ></i>
+        <div class="logo_name">VacinaSP</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Buscar...">
+         <span class="tooltip">Buscar</span>
+      </li>
+      <li>
+        <a href="Project.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Início</span>
+        </a>
+         <span class="tooltip">Início</span>
+      </li>
+      <li>
+       <a href="noticias.html">
+         <i class='bx bx-news' ></i>
+         <span class="links_name">Notícias</span>
+       </a>
+       <span class="tooltip">Notícias</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-calendar' ></i>
+         <span class="links_name">Cronograma</span>
+       </a>
+       <span class="tooltip">Cronograma</span>
+     </li>
+     <li>
+        <a href="minhas.html">
+          <i class='bx bx-check' ></i>
+          <span class="links_name">Minhas Vacinas</span>
+        </a>
+        <span class="tooltip">Minhas Vacinas</span>
+      </li>
+     <li>
+       <a href="Vacinometro.html">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Vacinômetro</span>
+       </a>
+       <span class="tooltip">Vacinômetro</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-capsule' ></i>
+         <span class="links_name">Campanhas</span>
+       </a>
+       <span class="tooltip">Campanhas</span>
+     </li>
+     <li>
+       <a href="AgendeSuaVacina.html">
+        <i class='bx bx-calendar-edit' ></i>
+         <span class="links_name">Agende sua Vacina</span>
+       </a>
+       <span class="tooltip">Agende sua Vacina</span>
+     </li>
+     <li>
+       <a href="sobre.html">
+        <i class='bx bx-book-open' ></i>
+         <span class="links_name">Sobre o Vacina SP</span>
+       </a>
+       <span class="tooltip">Sobre o Vacina SP</span>
+     </li>
+     <li>
+       <a href="configuracoes.html">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Configurações</span>
+       </a>
+       <span class="tooltip">Configurações</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="morty.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Vinícius Oliveira</div>
+             <div class="job">São Paulo</div>
+           </div>
+         </div>
+         <a href="tela-de-login.html">
+          <i class='bx bx-log-out' id="log_out" ></i>
+         </a>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Vacinômetro</div>
+       <p id="paragrafo">Com o começo da pandemia ficou a duvida de como saber como anda o numero de vacinas para a população 
+        com isso o governo de são paulo lançou o vacinometro uma ferramenta que você pode acompanhar o numeros
+        de pessoas vacinadas contra a COVID-19. <br> Abaixo os dados da vacinação no estado de são paulo: </p>
+        <div class="container">
+           <div style="overflow: auto;"> 
+                <table>                    
+                    <tr><th>Dose Única</th>     <td>1.170.128</td></tr>
+                    <tr><th>Primeira Dose</th>  <td>37.428.963</td></tr>                              
+                    <tr><th>Segunda Dose</th>   <td>29.345.384</td></tr>                    
+                    <tr><th>Terceira Dose</th>  <td>2.246.648</td></tr>
+            <tr><th>Total por Fabricante</th>   <td>70.191.123</td></tr>                           
+                </table>                  
+            </div>            
+        </div> 
+        <div class="text2"><h3>São Paulo atinge a marca de 99% da população adulta vacinada com pelo menos uma dose.</h3>      
+               <p id="paragrafo2"> Mais algumas informaçoes sobre a vacinaçao em SP: <br>
+                 99,98% da população adulta (+18) de SP com pelo menos uma dose. <br>
+                 85,89% da população adulta (+18) de SP com esquema vacinal completo. <br>
+                 83,42% da população de SP com pelo menos uma dose. <br>
+                 66,16% da população de SP com esquema vacinal completo. 
+                . <a href="https://www.saopaulo.sp.gov.br/">Para mais informações</a> </p>
+                    
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+    menuBtnChange(); 
+  });
+
+ 
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>
